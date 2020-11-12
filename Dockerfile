@@ -18,4 +18,13 @@ RUN pip install --upgrade pip && pip install \
     tensorflow-gpu==2.1
 WORKDIR /
 
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]
+RUN sudo apt install -y \
+    mecab \
+    libmecab-dev \
+    mecab-ipadic-utf8 \
+    swig
+
+RUN pip3 install mecab-python3==0.996.5
+
+RUN pip install torch==1.6.0 torchvision==0.7.0
+# CMD ["jupyter", "lab", "--ip=0.0.0.0", "--allow-root", "--LabApp.token=''"]

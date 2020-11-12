@@ -6,3 +6,13 @@ GPU環境で開発するのにDockerを使う
 ```
 docker run --gpus all -v ${PWD}/Notebooks:/work -p {host port}:{Docker port} {image tag}
 ```
+
+# Memos
+デタッチドモードでコンテナ起動
+```
+docker run --name ubuntu_bash -d -it {Container ID} bash
+```
+起動中のコンテナのCLIに入る
+```
+docker exec -it ubuntu_bash2 bash
+```
