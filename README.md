@@ -15,6 +15,7 @@ docker run --gpus all -v ${PWD}/Notebooks:/work -p {host port}:{Docker port} --n
 ```
 docker run --name ubuntu_bash -d -it {Container ID} bash
 ```
+
 起動中のコンテナのCLIに入る
 ```
 docker exec -it ubuntu_bash2 bash
